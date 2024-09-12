@@ -1,0 +1,159 @@
+/* Global and container styles */
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #221718);
+}
+
+#title{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#container h1 {
+  font-size: 2vw;
+  color: white;
+}
+
+#score {
+  color: white;
+}
+
+.fingerspell-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease; /* Add smooth transition for transform */
+}
+
+.fingerspell-container img {
+  transition: transform 0.5s ease-in-out, border 0.5s ease-in-out; /* Smooth transition for both transform and border */
+}
+
+.fingerspell-container.correct img {
+  border: 3px solid #4caf50 !important; /* Green border when correct */
+  transform: scale(1.1); /* Scale up when correct */
+}
+
+.fingerspell-container.wrong img {
+  border: 3px solid #b52222 !important; /* Green border when correct */
+  transform: scale(1.1); /* Scale up when correct */
+}
+
+
+#container img {
+  width: 30vmin;
+  height: 30vmin;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+button {
+  background-color: #a0586b !important;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1vw;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #763b4b !important;
+}
+
+/* Input styles */
+input[type="text"] {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1vw;
+}
+
+/* Guess section styles */
+.guess-section {
+  text-align: center;
+}
+
+#selectors {
+  display: flex;
+  width: 50vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+label {
+  font-size: 1rem;
+  margin-right: 10px;
+  color: #333;
+}
+
+select {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Speed selector */
+#speed {
+  font-size: 1vw;
+  color: white;
+}
+
+#speed-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #container h1 {
+    font-size: 4vw;
+  }
+
+  #container img {
+    width: 40vmin;
+    height: 40vmin;
+  }
+
+  button {
+    font-size: 3vw;
+    padding: 8px 16px;
+  }
+
+  input[type="text"] {
+    font-size: 3vw;
+  }
+
+  p {
+    font-size: 2.5vw;
+  }
+
+  #speed{
+    font-size: 3vw !important;
+  }
+
+  #selectors{
+    width: 95vw !important;
+  }
+}
