@@ -46,7 +46,7 @@ function App() {
     setIsPlaying(true);
     setIndex(0);
     setResult("");
-    setGuess("");
+    if (newWord == true) {setGuess("");}
     setCorrect(false);  // Reset the correct indicator
     setWrong(false)
 
